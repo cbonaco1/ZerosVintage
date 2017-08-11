@@ -19,7 +19,6 @@ ul {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -28,6 +27,7 @@ button, .cb-custom-button {
     background: #000;
     color: #fff;
     padding: 10px 40px;
+    width: 100%;
 }
 
 #top-nav {
@@ -151,4 +151,10 @@ button, .cb-custom-button {
     border:1px solid blue;
     height: 250px;
     width: 250px;
+}
+
+@media screen and (min-width: 1024px) {
+    button, .cb-custom-button {
+        width: 200px;
+    }
 }
