@@ -2,8 +2,9 @@
   "name": "ZerosVintage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "application.js",
   "scripts": {
+    "start": "node application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/cbonaco1/ZerosVintage/issues"
   },
-  "homepage": "https://github.com/cbonaco1/ZerosVintage#readme"
+  "homepage": "https://github.com/cbonaco1/ZerosVintage#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0"
+  }
 }
