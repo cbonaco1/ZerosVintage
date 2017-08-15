@@ -13,7 +13,9 @@ app.engine('hbs', handlebars({
 app.set('view engine', 'hbs');
 
 app.get("/", function(req, res) {
-    res.render('index');
+    res.render('index', {
+        pageName: 'index'
+    });
 });
 
 app.get("/browse", function(req, res) {
@@ -21,7 +23,9 @@ app.get("/browse", function(req, res) {
 });
 
 app.get("/pdp", function(req, res) {
-    res.render("pdp");
+    res.render("pdp", {
+        pageName: "pdp"
+    });
 });
 
 app.listen(PORT, function() {
