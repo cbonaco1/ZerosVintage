@@ -3,34 +3,34 @@ button, .cb-custom-button {
 }
 
 #header {
-    height: 300px;
     background-color: #9e9e9e;
     color: #fff;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     position: relative;
+    padding: 20px 10px 30px 10px;
 }
 
 #header .header-text {
-    background-color: transparent;
+    background-color: #fff;
+    position: static;
+    width: 65%;
     color: #000;
-    width: auto;
-    position: relative;
-    top: 0px;
-    left: 0px;
     padding: 15px;
-
 }
 #header .header-text h1 {
     font-size: 2.0rem;
+}
+#header .header-text h1, h3 {
     margin-bottom: 10px;
 }
 
 #header .header-text button {
-    position: static;
-    right: 0px;
-    width: 100%;
+    position: absolute;
+    left: 40px;
+    width: 200px;
+    margin-top: 0px;
 }
 
 #homepage-categories {
@@ -56,20 +56,10 @@ button, .cb-custom-button {
 #homepage-categories .homepage-category:first-child {
     margin-top: 30px;
 }
-
-#homepage-categories .homepage-category .hc-category {
-
-}
-
-#homepage-categories .homepage-category .hc-description {
-}
-
 #homepage-categories .homepage-category .hc-description button {
     position: absolute;
     bottom: -16px;
-
 }
-
 #homepage-categories .homepage-category.right .hc-description button {
     left: 30px;
 }
@@ -78,28 +68,25 @@ button, .cb-custom-button {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 645px) {
+    #header {
+        height: 300px;
+    }
     #header .header-text {
+        position: absolute;
         width: 500px;
-        background-color: #fff;
-        position: absolute;
-        top: 30px;
         left: 50px;
+        top: 30px;
     }
-    #header .header-text button {
-        position: absolute;
-        right: 10px;
-        width: 200px;
-    }
+}
 
-
+@media screen and (min-width: 1024px) {
     #homepage-categories {
         padding-left: 100px;
         padding-right: 100px;
     }
     #homepage-categories .homepage-category {
         flex-direction: row;
-        height: 200px;
         padding-bottom: 20px;
     }
     #homepage-categories .homepage-category.right {
@@ -116,8 +103,10 @@ button, .cb-custom-button {
         margin-right: 20px;
     }
     #homepage-categories .homepage-category .hc-category {
-        height: auto;
-        width: auto;
+        width: 20%;
+    }
+    #homepage-categories .homepage-category .hc-description {
+        width: 80%;
     }
     #homepage-categories .homepage-category .hc-description button {
         position: static;
