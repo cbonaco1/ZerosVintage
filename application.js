@@ -19,7 +19,9 @@ app.get("/", function(req, res) {
 });
 
 app.get("/browse", function(req, res) {
-    res.render("browse");
+    res.render("browse", {
+        pageName: "browse"
+    });
 });
 
 app.get("/pdp", function(req, res) {
