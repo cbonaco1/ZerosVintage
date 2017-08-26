@@ -33,7 +33,7 @@ button, .cb-custom-button {
 
 #overlay-wrapper {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -58,9 +58,6 @@ button, .cb-custom-button {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-}
-#top-nav #top-nav-menu-items li:last-child {
-    margin-right: 0px;
 }
 #top-nav #top-nav-menu-items .link-with-icon {
     display: flex;
@@ -95,8 +92,7 @@ button, .cb-custom-button {
 }
 
 #hamburger-menu-content {
-    display: none;
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     transform: translateX(100%);
@@ -107,7 +103,6 @@ button, .cb-custom-button {
     transition: transform 0.4s;
 }
 #hamburger-menu-content.slide-in {
-    display: block;
     transform: translateX(0%);
 }
 #hamburger-menu-content li {
