@@ -10,43 +10,52 @@
         <link rel="stylesheet" href="./css/{{pageName}}.css" media="screen" charset="utf-8">
     </head>
     <body>
+        <div id="overlay-wrapper"></div>
         <nav id="top-nav">
-            <div class="left-nav-items">
-                <ul id="menu-items">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">categories</a></li>
-                </ul>
-            </div>
-            <div class="logo">
-                <img src="./img/rock_n_roll.jpg" alt="ZerosVintage" />
-            </div>
-            <div class="right-icons">
-                <!-- Add search icon, when hover, search field expands -->
-                <div class="right-icon">
-                    <input type="text" name="product" value="" placeholder="Search...">
-                </div>
-                <div class="right-icon">
-                    <a href="#" title="Search"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
-                </div>
-                <!-- Instagram -->
-                <div class="right-icon">
-                    <a href="#" title="Instagram"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-                </div>
-                <!-- Etsy -->
-                <div class="right-icon">
-                    <a href="#" title="Etsy"><i class="fa fa-etsy fa-lg" aria-hidden="true"></i></a>
-                </div>
-                <!-- Cart -->
-                <div class="right-icon">
-                    <a href="#" title="Cart"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
-                </div>
-            </div>
+            <ul id="top-nav-menu-items">
+                <li class="link-with-icon">
+                    <div class="top-nav-menu-icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></div>
+                    <a href="#" title="Home">home</a>
+                </li>
+                <li class="link-with-icon">
+                    <div class="top-nav-menu-icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></div>
+                    <a href="#" title="Shop">shop</a>
+                </li>
+                <li class="link-with-icon">
+                    <div class="top-nav-menu-icon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+                    <a href="#" title="Search">search</a>
+                </li>
+                <li class="link-with-icon">
+                    <div class="top-nav-menu-icon"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
+                    <a href="#" title="Shopping Cart">cart</a>
+                <li class="logo"></li>
+                <li id="more-hamburger" class="link-with-icon">
+                    <div class="top-nav-menu-icon"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+                    <a href="#" title="More">more</a>
+                </li>
+            </ul>
         </nav>
+        <div id="hamburger-menu-content">
+            <a href="#" id="close-hamburger" class="hamburger close">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </a>
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>shop</li>
+                <li><a href="#" title="Etsy"><i class="fa fa-etsy fa-lg" aria-hidden="true"></i></a></li>
+                <li><a href="#" title="Instagram"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
 
-        {{{body}}}
 
+        <div class="content">
+            {{{body}}}
+        </div>
 
-        <script type="text/javascript" src="./js/application.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/application.js"></script>
     </body>
 </html>

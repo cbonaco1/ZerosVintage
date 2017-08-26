@@ -5,8 +5,6 @@ button, .cb-custom-button {
 #header {
     background-color: #9e9e9e;
     color: #fff;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     border-bottom: 1px solid black;
     position: relative;
     padding: 20px 10px 30px 10px;

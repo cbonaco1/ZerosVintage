@@ -31,47 +31,104 @@ button, .cb-custom-button {
     cursor: pointer;
 }
 
+#overlay-wrapper {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #top-nav {
+    position: fixed;
+    top: 0px;
+    background: #fff;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    z-index: 1;
+    transition: height 0.4s;
+}
+#top-nav #top-nav-menu-items {
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    height: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: 1px solid black;
+    height: 100%;
 }
-
-#top-nav .left-nav-items #menu-items {
+#top-nav #top-nav-menu-items li:last-child {
+    margin-right: 0px;
+}
+#top-nav #top-nav-menu-items .link-with-icon {
     display: flex;
     display: -webkit-flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100px;
+}
+#top-nav #top-nav-menu-items .link-with-icon a {
+    text-decoration: none;
+}
+#top-nav #top-nav-menu-items .link-with-icon .top-nav-menu-icon {
+    margin-bottom: 10px;
 }
 
-#top-nav .left-nav-items #menu-items li {
-    margin-right: 10px;
+.hamburger.close .bar1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
 }
-#top-nav .left-nav-items #menu-items li:last-child {
-    margin-right: 0px;
+.hamburger.close .bar2 {
+    opacity: 0;
+}
+.hamburger.close .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.hamburger .bar {
+    height: 3px;
+    width: 30px;
+    background-color: #000;
+    margin: 6px auto;
+    transition: 0.4s;
+}
+
+#hamburger-menu-content {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translateX(100%);
+    border-left: 1px solid #000;
+    background-color: #fff;
+    width: 75%;
+    z-index: 1001;
+    transition: transform 0.4s;
+}
+#hamburger-menu-content.slide-in {
+    display: block;
+    transform: translateX(0%);
+}
+#hamburger-menu-content li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    height: 40px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+#hamburger-menu-content #close-hamburger {
+    float: right;
 }
 
 #top-nav .logo {
-    height: 100%;
+    display: none;
 }
 
-#top-nav .right-icons {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#top-nav .right-icons .right-icon {
-    margin-left: 20px;
-}
-#top-nav .right-icons .right-icon:first-child {
-    margin-left: 0px;
+body .content {
+    /* Setting this to 80px since that is height of top nav bar */
+    margin-top: 80px;
 }
 
 #browse .left-nav-items {
@@ -96,5 +153,18 @@ button, .cb-custom-button {
 @media screen and (min-width: 1024px) {
     button, .cb-custom-button {
         width: 200px;
+    }
+    #top-nav {
+        height: 100px;
+    }
+    #top-nav .left-nav-items #hamburger {
+        display: none;
+    }
+
+    #top-nav .logo {
+        height: 86%;
+        width: 100px;
+        border-radius: 10px;
+        background-image: url('/img/rock_n_roll.jpg');
     }
 }
