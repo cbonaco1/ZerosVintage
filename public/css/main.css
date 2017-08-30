@@ -41,35 +41,49 @@ button, .cb-custom-button {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
-
+.logo-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 .logo {
     height: 86%;
-    width: 175px;
+    width: 165px;
     background-position-x: center;
-    background-postion-y: -8px;
+    background-position-y: -8px;
     border-radius: 10px;
     background-image: url('/img/rock_n_roll.jpg');
 }
 
-#mobile-logo-header {
+.navigation-bar {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+}
+
+.navigation-bar .navigation-bar-menu-item {
     display: flex;
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
+}
+
+#mobile-logo-header {
     height: 100px;
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid;
 }
-
+#top-nav-desktop {
+    display: none;
+}
 #top-nav {
-    position: fixed;
     bottom: 0px;
-    background: #fff;
     height: 70px;
-    width: 100%;
     box-shadow: 0px -3px 9px rgba(0,0,0,0.50);
-    z-index: 1;
     transition: 0.3s;
 }
 #top-nav #top-nav-menu-items {
@@ -147,15 +161,9 @@ button, .cb-custom-button {
     display: none;
 }
 
-body .content {
-    /* Setting this to 80px since that is height of top nav bar */
-    /*margin-top: 80px;*/
-}
-
 #browse .left-nav-items {
     width: 100px;
 }
-
 #browse .browse-grid {
     display: flex;
     display: -webkit-flex;
@@ -164,7 +172,6 @@ body .content {
     justify-content: space-between;
     align-items: center;
 }
-
 #browse .browse-grid .shirt {
     border:1px solid blue;
     height: 250px;
@@ -175,8 +182,99 @@ body .content {
     button, .cb-custom-button {
         width: 200px;
     }
+    body .content {
+        /* Setting this to 80px since that is height of top nav bar */
+        margin-top: 80px;
+    }
+    #top-nav-desktop {
+        display: block;
+        top: 0px;
+        height: 80px;
+        box-shadow: 0px 3px 9px rgba(0,0,0,0.50);
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items {
+        position: relative;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .top-nav-desktop-logo-container {
+        /*height: 100%;*/
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons a {
+        text-decoration: none;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons > li {
+        margin-left: 20px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons > li:first-child {
+        margin-left: 0px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form input[type='text'] {
+        border-right: 0;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 2px solid #ccc;
+        width: 100px;
+        transition: width 0.3s;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form input:focus {
+        width: 300px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form button[type='submit']{
+        background-color: #fff;
+        color: #000;
+        width: 50px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-menu-item {
+        /*position: relative;*/
+    }
+    /*#top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-menu-item:hover #desktop-more-submenu {
+        display: block;
+    }*/
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-submenu {
+        display: none;
+        position: absolute;
+        /* Gets top 80px since that is height of top nav bar */
+        top: 80px;
+        right: 0px;
+        background: #fff;
+        box-shadow: 0px 3px 9px rgba(0,0,0,0.50);
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-submenu li {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+        border-left: 1px solid rgba(0, 0, 0, 0.33);
+        border-right: 1px solid rgba(0, 0, 0, 0.33);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-submenu li:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.33);
+    }
+
+
+    #mobile-logo-header {
+        display: none;
+    }
     #top-nav {
-        height: 100px;
+        display: none;
+        /*height: 100px;
+        top: 0px;*/
     }
     #top-nav .left-nav-items #hamburger {
         display: none;
