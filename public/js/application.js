@@ -16,12 +16,12 @@ $(document).ready(function() {
         $("#desktop-more-submenu").slideDown();
     });
 
-    $("#desktop-more-submenu").on('mouseleave', function(event) {
+    $("#desktop-more-menu-item").on('mouseleave', function(event) {
         $("#desktop-more-submenu").slideUp();
     });
     // Not sure if i need this
     // $("#desktop-more-menu-item").on('focusout', function(event) {
-        // $("#desktop-more-submenu").slideUp();
+    //     $("#desktop-more-submenu").slideUp();
     // });
 
     // On click of hamburger menu, transition menu
