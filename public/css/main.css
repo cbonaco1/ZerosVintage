@@ -222,21 +222,28 @@ button, .cb-custom-button {
     #top-nav-desktop #top-nav-desktop-menu-items .right-icons > li:first-child {
         margin-left: 0px;
     }
-    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form input[type='text'] {
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-search-form input[type='text'] {
         border-right: 0;
         border-left: 0;
         border-top: 0;
         border-bottom: 2px solid #ccc;
+        height: 20px;
         width: 100px;
         transition: width 0.3s;
     }
-    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form input:focus {
-        width: 300px;
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-search-form input.expand-field[type='text'] {
+        width: 200px;
     }
-    #top-nav-desktop #top-nav-desktop-menu-items .right-icons .desktop-search-form button[type='submit']{
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-search-form input[type='text']:focus {
+        width: 200px;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-search-form input[type='text']::placeholder {
+        color: red;
+    }
+    #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-search-form button[type='submit']{
         background-color: #fff;
         color: #000;
-        width: 50px;
+        width: 25px;
         padding: 0;
     }
     #top-nav-desktop #top-nav-desktop-menu-items .right-icons #desktop-more-menu-item #desktop-more-submenu {

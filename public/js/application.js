@@ -37,4 +37,21 @@ $(document).ready(function() {
         $("#hamburger-menu-content").removeClass("slide-in");
     });
 
+    // Desktop search input field
+    // On focus out, if input field has length > 0, then don't change width
+    $("#desktop-search-form input[type='text']").on('focusout', function(event) {
+        var inputField = event.currentTarget;
+        if (inputField.value.length > 0) {
+            $(inputField).addClass("expand-field");
+        } else {
+            $(inputField).removeClass("expand-field");
+        }
+    });
+
+    $("#desktop-search-form").on('submit', function(event) {
+        event.preventDefault();
+        console.log("---Form submitted");
+        $("#desktop-search-form input[type='text']").val("");
+    });
+
 });
