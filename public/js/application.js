@@ -11,13 +11,18 @@ $(document).ready(function() {
             $("#desktop-more-submenu").slideDown();
         }
     });
-
-    $("#desktop-more-menu-item").on('mouseenter focusin', function(event) {
-        $("#desktop-more-submenu").slideDown();
+    // Stop propagation when a nav submenu item is clicked.
+    // Otherwise above click event will be triggered since events bubble up
+    $(".nav-bar-item-link").on('click', function(event) {
+        event.stopPropagation();
     });
 
-    $("#desktop-more-menu-item").on('mouseleave', function(event) {
-        $("#desktop-more-submenu").slideUp();
+    $(".nav-with-submenu").on('mouseenter focusin', function(event) {
+        $(event.currentTarget).find(".nav-submenu").slideDown();
+    });
+
+    $(".nav-with-submenu").on('mouseleave', function(event) {
+        $(event.currentTarget).find(".nav-submenu").slideUp();
     });
     // Not sure if i need this
     // $("#desktop-more-menu-item").on('focusout', function(event) {
