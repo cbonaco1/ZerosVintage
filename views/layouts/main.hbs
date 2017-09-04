@@ -79,7 +79,7 @@
                     <div class="top-nav-menu-icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></div>
                     <a href="#" title="Browse">browse</a>
                 </li>
-                <li class="link-with-icon">
+                <li id="mobile-nav-search-link" class="link-with-icon">
                     <div class="top-nav-menu-icon"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
                     <a href="#" title="Search">search</a>
                 </li>
@@ -108,7 +108,16 @@
                 </li>
             </ul>
         </nav>
-
+        <div id="overlay-search">
+            <div class="overlay-search-container">
+                <form id="overlay-search-form" action="" method="GET">
+                    <input id="overlay-search-field" type="text" name="product" value="" placeholder="Search...">
+                </form>
+                <a id="close-overlay-search" href="#" title="Close Search">
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
 
         <div class="content">
             {{{body}}}

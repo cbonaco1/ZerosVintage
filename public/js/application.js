@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var overlayWrapper = $("#overlay-wrapper");
 
     $("#desktop-more-menu-item").on('click', function(event) {
         var _this = $(this);
@@ -67,6 +68,27 @@ $(document).ready(function() {
         event.preventDefault();
         console.log("---Form submitted");
         $("#desktop-search-form input[type='text']").val("");
+    });
+
+    // Open search overlay when user clicks on Search in mobile nav
+    $("#mobile-nav-search-link").on('click', function(event) {
+        event.preventDefault();
+        overlayWrapper.show();
+        $("#overlay-search").show(function() {
+            $("#overlay-search").addClass("open");
+            $("#overlay-search-field").focus();
+        });
+    });
+
+    // Close search overlay
+    $("#close-overlay-search").on('click', function(event) {
+        var overlaySearch = $("#overlay-search");
+        event.preventDefault();
+        overlaySearch.removeClass("open");
+        overlaySearch.one('transitionend', function(e) {
+            overlayWrapper.hide();
+            overlaySearch.hide();
+        });
     });
 
 });

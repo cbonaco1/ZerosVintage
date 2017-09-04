@@ -39,7 +39,7 @@ button, .cb-custom-button {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 .logo-container {
     display: flex;
@@ -164,6 +164,38 @@ button, .cb-custom-button {
 
 #top-nav .logo {
     display: none;
+}
+
+#overlay-search {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    top: 200px;
+    width: 100%;
+}
+#overlay-search .overlay-search-container {
+    padding-left: 10px;
+}
+#overlay-search .overlay-search-container p {
+    color: #000;
+}
+#overlay-search #overlay-search-form input[type='text'] {
+    width: 0px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    transition: width 0.75s;
+}
+#overlay-search.open #overlay-search-form input[type='text'] {
+    width: 80%;
+}
+#overlay-search #close-overlay-search {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #fff;
+    padding: 4px;
+    border: 2px solid #fff;
 }
 
 #browse .left-nav-items {
