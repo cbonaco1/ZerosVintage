@@ -29,11 +29,21 @@ $(document).ready(function() {
     //     $("#desktop-more-submenu").slideUp();
     // });
 
-    // On click of hamburger menu, transition menu
+    // On click of hamburger menu, toggle menu
     $("#more-hamburger").on('click', function(event) {
+        var _this = $(this),
+            hamburger = _this.find(".hamburger");
         event.preventDefault();
-        $("#overlay-wrapper").show();
-        $("#hamburger-menu-content").addClass("slide-in");
+        if (_this.hasClass('expanded')) {
+            _this.removeClass('expanded');
+            hamburger.removeClass('close');
+            $("#hamburger-menu-content").removeClass("slide-in");
+        } else {
+            _this.addClass('expanded');
+            hamburger.addClass('close');
+            $("#hamburger-menu-content").addClass("slide-in");
+        }
+
     });
 
     $("#close-hamburger").on('click', function(event) {
