@@ -41,6 +41,7 @@ button, .cb-custom-button {
 #homepage-categories {
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 40px;
 }
 #homepage-categories .homepage-category {
     border: 1px solid green;
@@ -58,12 +59,33 @@ button, .cb-custom-button {
     background: #fff;
     position: relative;
 }
-#homepage-categories .homepage-category:first-child {
-    margin-top: 30px;
+#homepage-categories .homepage-category:last-child {
+    margin-bottom: 200px;
 }
 #homepage-categories .homepage-category .hc-description button {
     position: absolute;
     bottom: -16px;
+}
+#homepage-categories #t-shirt-homepage-category.homepage-category .hc-description p {
+    margin-bottom: 20px;
+}
+
+#homepage-categories .homepage-category .hc-items .hc-browse-list {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#homepage-categories .homepage-category .hc-items .hc-browse-list .hc-browse-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+#homepage-categories .homepage-category .hc-items .hc-browse-list .hc-browse-item:last-child {
+    margin-bottom: 20px;
+}
+#homepage-categories .homepage-category .hc-items .hc-browse-list .hc-browse-item .hc-browse-item-desc {
+    text-align: center;
 }
 #homepage-categories .homepage-category.right .hc-description button {
     left: 30px;
@@ -94,6 +116,9 @@ button, .cb-custom-button {
         flex-direction: row;
         padding-bottom: 20px;
     }
+    #homepage-categories .homepage-category:last-child {
+        margin-bottom: 30px;
+    }
     #homepage-categories .homepage-category.right {
         text-align: left;
     }
@@ -101,20 +126,19 @@ button, .cb-custom-button {
         text-align: right;
         flex-direction: row-reverse;
     }
+    #homepage-categories #t-shirt-homepage-category.homepage-category {
+        display: block;
+    }
     #homepage-categories .homepage-category.right .hc-description {
         margin-left: 20px;
     }
     #homepage-categories .homepage-category.left .hc-description {
         margin-right: 20px;
     }
-    #homepage-categories .homepage-category .hc-category {
-        width: 20%;
+    #homepage-categories .homepage-category .hc-items .hc-browse-list {
+        flex-direction: row;
     }
     #homepage-categories .homepage-category .hc-description {
-        width: 80%;
-    }
-    #homepage-categories .homepage-category .hc-description button {
-        position: static;
-        margin-top: 10px;
+        text-align: center;
     }
 }

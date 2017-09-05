@@ -29,6 +29,7 @@ button, .cb-custom-button {
     padding: 10px 40px;
     width: 100%;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #overlay-wrapper {
@@ -120,7 +121,7 @@ button, .cb-custom-button {
     opacity: 0;
 }
 .hamburger.close .bar3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-4px, -5px);
 }
 .hamburger .bar {
     height: 3px;
@@ -213,6 +214,33 @@ button, .cb-custom-button {
     border:1px solid blue;
     height: 250px;
     width: 250px;
+}
+
+/* overlay when user hovers over a product */
+.pdp-overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    transition: 0.4s;
+}
+.pdp-overlay.show {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdp-overlay .button {
+    width: 60%;
+    text-transform: uppercase;
+}
+.pdp-overlay .button:first-child {
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -91,4 +91,9 @@ $(document).ready(function() {
         });
     });
 
+    $(".hc-browse-item").on('mouseenter mouseleave', function(event) {
+        var _this = $(this);
+        _this.find('.pdp-overlay').toggleClass("show");
+    });
+
 });
